@@ -162,7 +162,7 @@ console.log("\nContact form");
 const submit = await fetch(`${BASE}/api/submit`, {
   method: "POST",
   headers: { "content-type": "application/json" },
-  body: JSON.stringify({ type: "contact", name: "Verify Script", email: "verify@example.com", message: "automated check" }),
+  body: JSON.stringify({ type: "contact", payload: { first: "Verify", last: "Script", email: "verify@example.com", topic: "Automated check", message: "automated check" } }),
 });
 const submitJson = await submit.json().catch(() => ({}));
 ok("/api/submit responds", submit.status === 200 && submitJson.ok === true);
