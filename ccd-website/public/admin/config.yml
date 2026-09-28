@@ -14,7 +14,7 @@
 
 backend:
   name: github
-  repo: heyaryansingh/CCD-website
+  repo: ccdweb/CCD-website
   branch: main
   base_url: https://ccdgroup.vercel.app
   auth_endpoint: api/auth
