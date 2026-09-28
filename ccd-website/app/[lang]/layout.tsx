@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import "../globals.css";
 import { ScrollFX } from "@/components/ScrollFX";
 import { localeInfo, locales } from "@/lib/i18n";
+import { Analytics } from "@vercel/analytics/next";
 
 // THE root layout. It lives under [lang] rather than at app/layout.tsx because
 // <html lang> and <html dir> have to be right, and a layout above the language
@@ -62,6 +63,7 @@ export default async function RootLayout({
       <body>
         {children}
         <ScrollFX />
+        <Analytics />
       </body>
     </html>
   );
